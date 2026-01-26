@@ -1,5 +1,6 @@
 import { ChevronDown, Menu, X } from "lucide-react";
 
+import logo from '../assets/sample_logo.png'
 import { useState } from "react";
 
 function Nav() {
@@ -21,7 +22,9 @@ function Nav() {
             href="/"
             className="text-2xl font-bold text-[#0F2A44] tracking-wide"
           >
-            Om Shree Enterprises
+            
+             <img src={logo} alt="Om Shree Enterprises Logo" className="inline h-10 ml-5 align-middle"/>
+            
           </a>
 
           {/* ================= DESKTOP MENU ================= */}
@@ -108,7 +111,7 @@ function Nav() {
                     Gallery
                   </a>
                   <a
-                    href="/testimonials"
+                    href="/feedback"
                     className="block px-6 py-3 hover:bg-slate-50 transition-colors"
                   >
                     Testimonials
