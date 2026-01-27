@@ -1,6 +1,6 @@
 import { ChevronDown, Menu, X } from "lucide-react";
 
-import logo from '../assets/sample_logo.png'
+import logo from '../assets/logo.png'
 import { useState } from "react";
 
 function Nav() {
@@ -23,7 +23,15 @@ function Nav() {
             className="text-2xl font-bold text-[#0F2A44] tracking-wide"
           >
             
-             <img src={logo} alt="Om Shree Enterprises Logo" className="inline h-10 ml-5 align-middle"/>
+<img
+  src={logo}
+  alt="Om Shree Enterprises Logo"
+  className="
+    h-10 sm:h-12
+    w-auto
+    object-contain
+  "
+/>
             
           </a>
 

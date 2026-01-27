@@ -79,7 +79,7 @@ export default function WindowShowcaseSlider() {
   return (
     <>
       {/* SECTION */}
-      <section className="bg-slate-50 py-16">
+      <section className=" py-16">
         <div className="max-w-7xl mx-auto px-0 sm:px-6">
 
           {/* HEADER */}

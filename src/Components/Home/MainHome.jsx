@@ -1,9 +1,13 @@
+import GlassOptions from "./Glass";
+import HardwareSection from "./Hardware";
 import HeroSecton from "./HeroSection";
 import ProductShowcase from "./WindowType";
 import ProductWindow from "./Product_window";
+import SlidingProfiles from "./Glazy";
 import TechnicalGallerySlider from "./WindowType";
 import WhoWeAre from "./whoweare";
 import Whychoose from "./Whychoose";
+import WindowLamination from "./Lamination";
 import WindowShowcaseSlider from "./WindowType";
 
 function MainHome()
@@ -16,7 +20,12 @@ function MainHome()
        
         <ProductWindow></ProductWindow>
      <WindowShowcaseSlider></WindowShowcaseSlider>
+     <WindowLamination></WindowLamination>
+      <GlassOptions></GlassOptions>
+      <SlidingProfiles></SlidingProfiles>
+      <HardwareSection></HardwareSection>
          <Whychoose></Whychoose>
+        
         </div>
     )
 }
