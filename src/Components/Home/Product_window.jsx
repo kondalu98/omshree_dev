@@ -26,7 +26,7 @@ export default function ProductWindow() {
 
             
             <h2 className="text-3xl md:text-3xl font-bold text-[#0F2A44] leading-tight">
-              Premium uPVC Windows And uPVC Doors <br className="hidden md:block" />
+              Premium uPVC Windows  <span></span>
               
               <span className="text-slate-500">Crafted for Modern Living</span>
             </h2>
@@ -54,7 +54,7 @@ export default function ProductWindow() {
               </h2>
               <p className="text-lg text-slate-900 leading-relaxed">
                 Engineered for strength, insulation, and elegance, our uPVC
-                windows and doors enhance natural light, security, and
+                windows  enhance natural light, security, and
                 long-lasting performance for every space.
               </p>
             </div>

@@ -9,6 +9,7 @@ import WhoWeAre from "./whoweare";
 import Whychoose from "./Whychoose";
 import WindowLamination from "./Lamination";
 import WindowShowcaseSlider from "./WindowType";
+import ProductDoor from "./Product_Door";
 
 function MainHome()
 {
@@ -24,6 +25,7 @@ function MainHome()
       <GlassOptions></GlassOptions>
       <SlidingProfiles></SlidingProfiles>
       <HardwareSection></HardwareSection>
+      <ProductDoor></ProductDoor>
          <Whychoose></Whychoose>
         
         </div>

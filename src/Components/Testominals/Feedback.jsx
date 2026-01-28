@@ -1,6 +1,8 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useEffect, useState } from "react";
-
+import client_1 from '../assets/Gallery/photo_1.webp';
+import client_2 from '../assets/Gallery/photo_6.webp';
+import client_3 from '../assets/Gallery/photo_8.webp';
 import test from '../assets/About_slider.png'; // Your main section background
 
 // I added 'postImg' to each object. This is the background image of the card (the room/window).
@@ -8,19 +10,18 @@ const testimonials = [
   {
     id: 1,
     name: "Ramesh Kumar",
-    role: "Home Owner, Vizag",
-    image: "https://i.pravatar.cc/150?img=12", // Person
-    postImg: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop", // Room/Window result
+    role: "Resort Owner, Vizag",
+    image: "https://i.pravatar.cc/150?img=12",
+    postImg:client_1, // Person
     review: "The uPVC windows look premium and reduce noise significantly.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Sujatha Rao",
+    name: "Naveen Kumar",
     role: "Apartment Resident",
     image: "https://i.pravatar.cc/150?img=47",
-    postImg: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=2000&auto=format&fit=crop",
-    review: "Excellent service. The doors are strong, stylish, and perfect for the weather.",
+    postImg:client_2,    review: "Excellent service. The doors are strong, stylish, and perfect for the weather.",
     rating: 5,
   },
   {
@@ -28,8 +29,8 @@ const testimonials = [
     name: "Imran Khan",
     role: "Commercial Client",
     image: "https://i.pravatar.cc/150?img=33",
-    postImg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop",
-    review: "Professional team. Improved insulation and appearance of our office.",
+    postImg:client_3,  
+    review: "Professional team. Improved insulation and appearance of our Apartment.",
     rating: 4,
   },
   {
@@ -132,7 +133,7 @@ function Feedback() {
                     style={{ width: `${100 / itemsPerPage}%` }}
                   >
                     {/* 🎨 NEW CARD DESIGN STARTS HERE */}
-                    <div className="relative h-[480px] w-full rounded-[2rem] overflow-hidden shadow-2xl group cursor-pointer">
+                    <div className="relative h-[420px] w-full rounded-[1rem] overflow-hidden shadow-2xl group cursor-pointer">
                       
                       {/* 1. Background Image (The Project) */}
                       <img 
@@ -146,21 +147,8 @@ function Feedback() {
 
                       {/* 2. The White Floating Card */}
                       <div className="absolute bottom-4 left-4 right-4 bg-white rounded-3xl p-6 pt-12 text-center shadow-lg transition-transform duration-300 group-hover:-translate-y-2">
-                        
-                        {/* 3. Avatar (Overlapping) */}
-                        <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                          <div className="relative">
-                            <img
-                              src={item.image}
-                              alt={item.name}
-                              className="w-20 h-20 rounded-full border-4 border-white shadow-md object-cover"
-                            />
-                            {/* Optional: Glow effect behind avatar */}
-                            <div className="absolute inset-0 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.2)] -z-10"></div>
-                          </div>
-                        </div>
-
-                        {/* Name & Role */}
+                    
+                      {/* Name & Role */}
                         <h4 className="text-xl font-bold text-[#0F2A44]">
                           {item.name}
                         </h4>

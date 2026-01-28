@@ -18,15 +18,19 @@ function WindowLamination() {
   return (
     <section className="bg-white py-20 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        
+        {/* Changed grid-cols to 1 on mobile, 2 on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
           {/* LEFT SIDE – IMAGE GRID */}
+          {/* order-2 puts this BELOW the text on mobile */}
+          {/* md:order-1 puts this ON THE LEFT on desktop */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative order-2 md:order-1"
           >
             {/* Decorative blur */}
             <div className="absolute -inset-6 bg-slate-100 rounded-full blur-3xl opacity-60 -z-10" />
@@ -55,12 +59,14 @@ function WindowLamination() {
           </motion.div>
 
           {/* RIGHT SIDE – CONTENT */}
+          {/* order-1 puts this ON TOP on mobile */}
+          {/* md:order-2 puts this ON THE RIGHT on desktop */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-8 order-1 md:order-2"
           >
             {/* Heading */}
             <div>
@@ -70,7 +76,7 @@ function WindowLamination() {
                   Lamination Options
                 </span>
               </div>
-              <h2 className="text-3xl md:text-3xl font-bold text-[#0F2A44]">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F2A44]">
                 Window Lamination Color Options
               </h2>
             </div>

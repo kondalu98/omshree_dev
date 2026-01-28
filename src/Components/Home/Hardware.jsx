@@ -11,82 +11,73 @@ const hardwareImages = [
 
 function HardwareSection() {
   return (
-    <section className="py-10 md:py-24 overflow-hidden">
+    <section className="py-16 md:py-24 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-         {/* LEFT – HARDWARE IMAGE GRID */}
-<motion.div
-  initial={{ opacity: 0, x: -40 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  viewport={{ once: true }}
-  className="w-full"
->
-  <div
-    className="
-      grid
-      grid-cols-1
-      sm:grid-cols-2
-      gap-6
-    "
-  >
-    {/* TOP – FULL WIDTH IMAGE */}
-    <motion.div
-      whileHover={{ y: -5 }}
-      className="
-        sm:col-span-2
-        bg-white
-        rounded-2xl
-        p-6
-        flex
-        items-center
-        justify-center
-        shadow-sm
-        border border-slate-100
-      "
-    >
-      <img
-        src={hardwareImages[0]}
-        alt="Window Hardware Main"
-        className="w-full h-48 sm:h-56 object-contain"
-      />
-    </motion.div>
+          {/* LEFT – HARDWARE IMAGE GRID */}
+          {/* order-2 puts this BELOW content on mobile */}
+          {/* md:order-1 puts this LEFT of content on desktop */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="w-full order-2 md:order-1"
+          >
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              {/* Image 1: Full Width */}
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+                className="col-span-2 overflow-hidden rounded-2xl"
+              >
+                <img
+                  src={hardwareImages[0]}
+                  alt="Window Hardware Main"
+                  // 'object-cover' fills the space, 'bg-slate-50' adds a subtle background if image has transparency
+                  className="w-full h-48 sm:h-64 object-cover md:object-contain bg-slate-50"
+                />
+              </motion.div>
 
-    {/* BOTTOM – TWO IMAGES */}
-    {hardwareImages.slice(1).map((img, index) => (
-      <motion.div
-        key={index}
-        whileHover={{ y: -5 }}
-        className="
-          bg-white
-          rounded-2xl
-          p-6
-          flex
-          items-center
-          justify-center
-          shadow-sm
-          border border-slate-100
-        "
-      >
-        <img
-          src={img}
-          alt={`Window Hardware ${index + 2}`}
-          className="w-full h-40 object-contain"
-        />
-      </motion.div>
-    ))}
-  </div>
-</motion.div>
+              {/* Image 2 */}
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden rounded-2xl"
+              >
+                <img
+                  src={hardwareImages[1]}
+                  alt="Window Hardware Detail"
+                  className="w-full h-32 sm:h-48 object-cover md:object-contain bg-slate-50"
+                />
+              </motion.div>
+
+              {/* Image 3 */}
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden rounded-2xl"
+              >
+                <img
+                  src={hardwareImages[2]}
+                  alt="Window Hardware Detail"
+                  className="w-full h-32 sm:h-48 object-cover md:object-contain bg-slate-50"
+                />
+              </motion.div>
+            </div>
+          </motion.div>
 
 
           {/* RIGHT – CONTENT */}
+          {/* order-1 puts this ABOVE images on mobile */}
+          {/* md:order-2 puts this RIGHT of images on desktop */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="space-y-6 md:pl-4"
+            className="space-y-6 md:pl-4 order-1 md:order-2"
           >
              <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
               Premium Hardware
