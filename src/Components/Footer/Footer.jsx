@@ -4,7 +4,7 @@ import {
   Phone,
 } from "lucide-react";
 
-import logo from "../assets/Updated_logo.png";
+import logo from "../assets/footer_logo.png";
 
 function Footer() {
   return (

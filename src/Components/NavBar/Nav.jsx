@@ -1,7 +1,7 @@
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import logo from '../assets/Updated_logo.png';
+import logo from '../assets/final_logo.png';
 
 function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
