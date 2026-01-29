@@ -14,7 +14,7 @@ const glassTypes = [
 
 function GlassOptions() {
   return (
-    <section className="py-12 md:py-16 overflow-hidden">
+    <section className="py-8 md:py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TOP SECTION */}
@@ -35,7 +35,7 @@ function GlassOptions() {
                   Glass Options
                 </span>
               </div>
-              <h2 className="text-3xl font-bold text-[#0F2A44]">
+              <h2 className="text-3xl font-semibold text-[#0F2A44]">
                 Window Glass Options
               </h2>
             </div>

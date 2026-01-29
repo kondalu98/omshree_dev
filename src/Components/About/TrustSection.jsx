@@ -1,6 +1,6 @@
 function TrustSection() {
   return (
-    <section className="bg-gray-50 py-16 md:py-20">
+    <section className="py-16 md:py-15">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}

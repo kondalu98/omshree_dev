@@ -1,29 +1,29 @@
-import { ChevronLeft, ChevronRight } from "lucide-react"; // If you don't have lucide-react, you can use text arrows "<" ">"
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import img_1 from "../assets/window_img_1.png";
-import img_2 from "../assets/img3.webp";
+import img_1 from "../assets/slider_img_1.png";
+import img_2 from "../assets/windows/c-profile-pic.jpg";
 import img_3 from "../assets/slider_5.jpg";
 
 const slides = [
   {
     image: img_1,
     title: "Transform Your Space",
-    subtitle: "Premium uPVC Windows",
-    desc: "Our uPVC windows combine modern aesthetics with exceptional insulation and durability, improving energy efficiency, security, and comfort.",
-    buttons: [{ label: "View Products", link: "/products", type: "primary" }],
+    subtitle: "Premium UPVC Windows",
+    desc: "Our UPVC windows combine modern aesthetics with exceptional insulation and durability, improving energy efficiency, security, and comfort.",
+    buttons: [{ label: "View Windows", link: "/products/upvc-windows", type: "primary" }],
   },
   {
     image: img_2,
     title: "Luxury Meets Durability",
-    subtitle: "Discover Our uPVC Doors",
-    desc: "Designed for strength and sophistication, our uPVC doors deliver unmatched security, excellent energy efficiency, and a refined modern look.",
-    buttons: [{ label: "About Us", link: "/about", type: "primary" }],
+    subtitle: "Discover Our UPVC Doors",
+    desc: "Designed for strength and sophistication, our UPVC doors deliver unmatched security, excellent energy efficiency, and a refined modern look.",
+    buttons: [{ label: "View Doors", link: "/products/upvc-doors", type: "primary" }],
   },
   {
     image: img_3,
     title: "Modernize Your Space",
-    subtitle: "uPVC Facades & Panels",
+    subtitle: "UPVC Facades & Panels",
     desc: "Upgrade your interiors and exteriors with durable, stylish uPVC facades and panels built for long-lasting beauty and contemporary design.",
     buttons: [{ label: "Contact Us", link: "/contact", type: "primary" }],
   },
@@ -37,16 +37,12 @@ function HeroSection() {
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
 
-  // ✅ Auto Slide Logic (Simplified & Robust)
+  // ✅ Auto Slide Logic
   useEffect(() => {
     if (isPaused) return;
-
     const timer = setTimeout(() => {
       nextSlide();
-    }, 5000); // Change slide every 5 seconds
-
-    // Cleanup function clears the timer if the component unmounts 
-    // OR if 'current' changes (reseting the clock on manual click)
+    }, 5000); 
     return () => clearTimeout(timer);
   }, [current, isPaused]);
 
@@ -58,7 +54,7 @@ function HeroSection() {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
-  // ✅ Swipe Handlers for Mobile
+  // ✅ Swipe Handlers
   const minSwipeDistance = 50;
 
   const onTouchStart = (e) => {
@@ -81,8 +77,11 @@ function HeroSection() {
   };
 
   return (
+    // Height fixed to prevent layout shifts. 
+    // h-[600px] for mobile ensures images aren't too short.
+    // h-[90vh] for desktop fills the screen nicely.
     <section
-      className="relative w-full min-h-[500px] md:h-[85vh] overflow-hidden bg-gray-900 group"
+      className="relative w-full h-[600px] md:h-[90vh] overflow-hidden group bg-slate-900"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={onTouchStart}
@@ -103,38 +102,52 @@ function HeroSection() {
               alt={slide.title}
               className="h-full w-full object-cover object-center"
             />
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/30 md:bg-black/40" />
+            {/* Gradient Overlay:
+              Changed to bg-black/50 (50% opacity) for better text readability on all images.
+              Added a gradient to ensure bottom text/dots are always visible.
+            */}
+            <div className="absolute inset-0 bg-black/50 md:bg-black/40 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
           </div>
 
           {/* Centered Content */}
           <div className="absolute inset-0 flex items-center justify-center text-center px-6 md:px-12">
             <div
-              key={current} // This key ensures text animates every time slide changes
-              className={`max-w-4xl w-full text-white space-y-5 md:space-y-6 ${
-                index === current ? "animate-fade-in-up" : ""
+              key={current}
+              // Added simple translate animation for the text
+              className={`max-w-4xl w-full text-white space-y-4 md:space-y-6 transform transition-all duration-700 ease-out ${
+                index === current ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >
-              {/* 🔹 Adjusted Title Size (Smaller as requested) */}
-              <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold tracking-tight drop-shadow-md">
+              {/* Subtitle Badge */}
+              <span className="inline-block py-1 px-3 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs md:text-sm font-semibold tracking-wide uppercase backdrop-blur-sm mb-2">
+                {slide.subtitle}
+              </span>
+
+              {/* Main Title */}
+              <h2 className="text-3xl sm:text-2xl md:text-3xl font-semibold tracking-tight drop-shadow-lg leading-tight">
                 {slide.title}
               </h2>
 
-              <h3 className="text-lg sm:text-xl md:text-2xl text-sky-400 font-medium tracking-wide">
-                {slide.subtitle}
-              </h3>
-
-              <p className="text-gray-100 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+              {/* Description */}
+              <p className="text-gray-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed drop-shadow-md font-medium">
                 {slide.desc}
               </p>
 
               {/* Buttons */}
-              <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 md:pt-6">
+              <div className="flex flex-col sm:flex-row justify-center gap-4 pt-6">
                 {slide.buttons.map((btn, i) => (
                   <a
                     key={i}
                     href={btn.link}
-                    className="px-8 py-3 rounded-full bg-sky-500 hover:bg-sky-600 transition-all duration-300 font-semibold shadow-lg hover:shadow-sky-500/40 transform hover:-translate-y-1 text-sm md:text-base"
+                    className="
+                      inline-flex items-center justify-center
+                      px-8 py-3.5 text-sm md:text-base
+                      rounded-full
+                      bg-sky-600 hover:bg-sky-500
+                      text-white font-bold
+                      transition-all duration-300
+                      shadow-lg hover:shadow-sky-500/40 hover:-translate-y-1
+                    "
                   >
                     {btn.label}
                   </a>
@@ -145,32 +158,32 @@ function HeroSection() {
         </div>
       ))}
 
-      {/* Navigation Arrows (Hidden on Mobile) */}
+      {/* Navigation Arrows (Desktop Only) */}
       <button
         onClick={prevSlide}
-        className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/20 text-white backdrop-blur-sm transition hover:bg-white hover:text-black hover:border-white"
+        className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-black/20 text-white backdrop-blur-md transition-all hover:bg-white hover:text-black hover:scale-110"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={28} />
       </button>
 
       <button
         onClick={nextSlide}
-        className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/20 text-white backdrop-blur-sm transition hover:bg-white hover:text-black hover:border-white"
+        className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-black/20 text-white backdrop-blur-md transition-all hover:bg-white hover:text-black hover:scale-110"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={28} />
       </button>
 
       {/* Pagination Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
             aria-label={`Go to slide ${index + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 ${
+            className={`h-2.5 rounded-full transition-all duration-300 shadow-sm ${
               current === index
-                ? "w-8 bg-sky-500"
-                : "w-2 bg-white/60 hover:bg-white"
+                ? "w-10 bg-sky-500"
+                : "w-2.5 bg-white/50 hover:bg-white"
             }`}
           />
         ))}

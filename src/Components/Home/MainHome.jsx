@@ -1,6 +1,7 @@
 import GlassOptions from "./Glass";
 import HardwareSection from "./Hardware";
 import HeroSecton from "./HeroSection";
+import ProductDoor from "./Product_Door";
 import ProductShowcase from "./WindowType";
 import ProductWindow from "./Product_window";
 import SlidingProfiles from "./Glazy";
@@ -9,7 +10,6 @@ import WhoWeAre from "./whoweare";
 import Whychoose from "./Whychoose";
 import WindowLamination from "./Lamination";
 import WindowShowcaseSlider from "./WindowType";
-import ProductDoor from "./Product_Door";
 
 function MainHome()
 {
@@ -19,13 +19,21 @@ function MainHome()
         <HeroSecton></HeroSecton>
         <WhoWeAre></WhoWeAre>
        
-        <ProductWindow></ProductWindow>
+       <ProductWindow
+  buttonText="View uPVC Windows"
+  buttonLink="/products/upvc-windows"
+/>
+
      <WindowShowcaseSlider></WindowShowcaseSlider>
      <WindowLamination></WindowLamination>
       <GlassOptions></GlassOptions>
       <SlidingProfiles></SlidingProfiles>
       <HardwareSection></HardwareSection>
-      <ProductDoor></ProductDoor>
+     <ProductDoor
+  buttonText="View UPVC Doors"
+  buttonLink="/products/upvc-doors"
+/>
+
          <Whychoose></Whychoose>
         
         </div>

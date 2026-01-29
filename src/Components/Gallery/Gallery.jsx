@@ -5,12 +5,12 @@ import { X } from "lucide-react";
 import g1 from "../assets/Gallery/photo_1.webp";
 import g10 from "../assets/Gallery/photo_10.webp";
 import g2 from "../assets/Gallery/photo_2.webp";
-import g3 from "../assets/Gallery/photo_3.webp";
+import g3 from "../assets/Gallery/omshree_frame.jpeg";
 import g4 from "../assets/Gallery/photo_4.webp";
 import g5 from "../assets/Gallery/photo_5.webp";
 import g6 from "../assets/Gallery/photo_6.webp";
 import g7 from "../assets/Gallery/photo_8.webp";
-import g8 from "../assets/Gallery/photo_9.webp";
+import g8 from "../assets/Gallery/photo_16.webp";
 import g9 from "../assets/Gallery/photo_11.webp";
 import hero from "../assets/About_slider.png";
 

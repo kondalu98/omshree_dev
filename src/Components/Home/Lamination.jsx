@@ -76,7 +76,7 @@ function WindowLamination() {
                   Lamination Options
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F2A44]">
+              <h2 className="text-3xl md:text-4xl font-semibold text-[#0F2A44]">
                 Window Lamination Color Options
               </h2>
             </div>
@@ -85,7 +85,7 @@ function WindowLamination() {
             <div className="space-y-5 text-slate-600 text-lg">
               <p>
                 Choose from a wide range of premium lamination finishes that
-                enhance the beauty and durability of your uPVC windows.
+                enhance the beauty and durability of your UPVC windows.
               </p>
 
               <p>

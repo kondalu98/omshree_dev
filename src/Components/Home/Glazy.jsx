@@ -8,38 +8,44 @@ import t62_3t from "../assets/windows/three.png";
 const profileData = [
   {
     img: p55,
-    title: "P 55 – 2.5T Sliding",
-    specs: "W-81mm, H-45mm",
+    title: "2.5 Track-Sliding",
+    specs: "W-80mm, H-50mm",
   },
   {
     img: t62_25t,
-    title: "T 62 – 2.5T Sliding",
-    specs: "W-97mm, H-45mm",
+    title: "3 Track-Sliding",
+    specs: "W-99mm, H-50mm",
   },
   {
     img: t62_3t,
-    title: "T 62 – 3T Sliding",
-    specs: "W-112mm, H-45mm",
+    title: "3 Track-Sliding",
+    specs: "W-112mm, H-52mm",
   },
   {
     img: p60,
-    title: "P 60 – 2.5T Sliding",
-    specs: "W-89mm, H-42mm",
+    title: "2.5 Track-Sliding",
+    specs: "W-90mm, H-48mm",
   },
 ];
 
 function SlidingProfiles() {
   return (
-    <section className="py-12 md:py-16 overflow-hidden">
+    <section className="py-8 md:py-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADING */}
         <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-            Glazing Systems Window Designs
-          </h2>
-          <div className="w-16 h-1 bg-sky-500 mx-auto mt-3 rounded-full" />
-          <p className="mt-3 text-slate-600 text-sm md:text-base">
+         <h2 className="
+  text-xl sm:text-2xl md:text-4xl
+  font-semibold
+  text-[#0F2A44]
+  text-center
+">
+  Glazing Systems Window Designs
+</h2>
+
+          <div className="w-28 h-1 bg-sky-500 mx-auto mt-4 rounded-full" />
+         <p className="mt-4 text-lg text-slate-600">
             Explore our standard window layouts and configurations
           </p>
         </div>

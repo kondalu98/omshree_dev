@@ -3,7 +3,8 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import logo from "../assets/check.png";
+
+import logo from "../assets/Updated_logo.png";
 
 function Footer() {
   return (
@@ -19,11 +20,12 @@ function Footer() {
 
           {/* 1. Company Info */}
           <div className="space-y-4">
-            <img 
-              src={logo} 
-              alt="Omshree Enterprises Logo"
-              className="lg:h-13 md:h-14 sm:h-14 w-auto object-contain" 
-            />
+           <img 
+  src={logo} 
+  alt="Omshree Enterprises Logo"
+  className="h-14 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+/>
+
             <p className="text-sm leading-relaxed text-slate-400">
               Omshree Enterprises provide Premium UPVC windows and doors in Vizag, delivering durable,
               energy-efficient, and stylish solutions for homes and

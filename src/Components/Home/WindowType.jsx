@@ -58,7 +58,7 @@ const windowDesigns = [
   { id: 5, src: w5, title: "Mono Rail Sliding With Fixed" },
   { id: 6, src: w6, title: "Casement Top Hung" },
   { id: 7, src: w7, title: "2-Track 2-Panel" },
-  { id: 8, src: w8, title: "5-Track 2-Panel Mesh" },
+  { id: 8, src: w8, title: "2-Track 2-Panel Mesh" },
   { id: 9, src: w9, title: "2-Track 3-Panel Center Fixed" },
   { id: 10, src: w10, title: "2-Track 4-Panel" },
   { id: 11, src: w11, title: "Casement Fixed Single Open" },
@@ -84,11 +84,11 @@ export default function WindowShowcaseSlider() {
 
           {/* HEADER */}
           <div className="text-center mb-10 px-6 sm:px-0">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#0F2A44]">
               Window Configuration Designs
             </h2>
-            <div className="w-20 h-1 bg-sky-500 mx-auto mt-4 rounded-full" />
-            <p className="mt-4 text-slate-600">
+            <div className="w-28 h-1 bg-sky-500 mx-auto mt-4 rounded-full" />
+            <p className="mt-4 text-lg text-slate-600">
               Explore our standard window layouts and configurations
             </p>
           </div>

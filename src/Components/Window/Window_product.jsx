@@ -1,43 +1,72 @@
-
-import window from "../assets/windows/upvc_window_1.avif";
 import GlassOptions from "../Home/Glass";
-import SlidingProfiles from "../Home/Glazy";
 import HardwareSection from "../Home/Hardware";
-import WindowLamination from "../Home/Lamination";
 import ProductWindow from "../Home/Product_window";
+import SlidingProfiles from "../Home/Glazy";
+import WindowLamination from "../Home/Lamination";
 import WindowShowcaseSlider from "../Home/WindowType";
-
+import windowImg from "../assets/sample_window_slider.png";
 
 function WindowProduct() {
   return (
-    <>
+    <div className="w-full overflow-x-hidden bg-white">
+      
       {/* 🔝 Top Hero Section */}
-      <section className="relative w-full h-[300px] sm:h-[340px] md:h-[450px] overflow-hidden">
+      <section className="relative w-full h-[280px] sm:h-[360px] md:h-[500px]">
+        {/* Background Image */}
         <img
-          src={window}
-          alt="About Baydee Profiles uPVC Windows and Doors"
+          src={windowImg}
+          alt="Premium Baydee uPVC Windows"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/30" /> */}
+        {/* Dark Gradient Overlay (Crucial for text readability) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent" />
 
+        {/* Content Container */}
         <div className="relative z-10 h-full flex items-center">
-          <div className="max-w-7xl mx-auto px-6 w-full">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 w-full">
+            
+            {/* Animated Text */}
+            <div className="animate-fade-in-up">
             <h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold drop-shadow-lg animate-fade-in-up">
-              Upvc Windows
-            </h3>
-            <div className="h-1 w-20 bg-sky-500 mt-4 rounded-full"></div>
+                Premium uPVC Windows
+              </h3>
+              
+              {/* Decorative Underline */}
+              <div className="h-1.5 w-20 sm:w-24 bg-sky-500 mt-4 rounded-full"></div>
+              
+              <p className="text-slate-200 mt-4 text-base sm:text-lg md:text-xl max-w-xl font-medium drop-shadow-md">
+                Engineered for durability, designed for elegance. Experience the best in noise reduction and energy efficiency.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
-      <ProductWindow></ProductWindow>
-           <WindowShowcaseSlider></WindowShowcaseSlider>
-           <WindowLamination></WindowLamination>
-            <GlassOptions></GlassOptions>
-            <SlidingProfiles></SlidingProfiles>
-            <HardwareSection></HardwareSection>
-     
-    </>
+
+      {/* 📦 Page Content Sections */}
+      <div className="flex flex-col">
+        
+        {/* Main Product Intro */}
+        <ProductWindow
+          buttonText="Explore Our Windows"
+          buttonLink="/gallery"
+        />
+
+        {/* Showcase Slider */}
+        <div className="w-full">
+          <WindowShowcaseSlider />
+        </div>
+
+        {/* Technical Details & Options */}
+        <WindowLamination />
+        <GlassOptions />
+        <SlidingProfiles />
+        <HardwareSection />
+        
+      </div>
+
+    </div>
   );
 }
 

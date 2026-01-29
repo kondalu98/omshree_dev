@@ -1,5 +1,5 @@
-import about from "../assets/windows/c-profile-pic.jpg";
 import ProductDoor from "../Home/Product_Door";
+import about from "../assets/windows/c-profile-pic.jpg";
 import upvc_door from "../assets/windows/upvc_door.png";
 
 function DoorProduct() {
@@ -18,7 +18,7 @@ function DoorProduct() {
 
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-6 w-full">
-          <h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold drop-shadow-lg animate-fade-in-up">              uPVC Doors
+          <h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold drop-shadow-lg animate-fade-in-up">              UPVC Doors
             </h3>
             <div className="h-1.5 w-24 bg-sky-500 mt-4 rounded-full shadow-lg"></div>
           </div>
@@ -26,7 +26,11 @@ function DoorProduct() {
       </section>
 
       {/* Main Product Content */}
-      <ProductDoor />
+     <ProductDoor
+  buttonText="Explore Our Doors"
+  buttonLink="/gallery"
+/>
+
 
       {/* 🖼️ Bottom Image Section (Responsive) */}
       <section className="py-12 md:py-16">
