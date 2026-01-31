@@ -40,7 +40,7 @@ function WhoWeAre() {
                  <h2 className="text-3xl md:text-3xl  sm:text-1xl font-semibold text-[#0F2A44] leading-tight">
                Redefining Spaces with <span></span>
               
-              <span className="text-sky-600">Premium UPVC Solutions</span>
+              <span className="text-sky-600">Premium uPVC Solutions</span>
             </h2>
               
             </div>
@@ -100,7 +100,7 @@ function WhoWeAre() {
 
             <motion.img
               src={about}
-              alt="Baydee Profiles UPVC Windows and Doors in Vizag"
+              alt="Baydee Profiles uPVC Windows and Doors in Vizag"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5 }}
               className="

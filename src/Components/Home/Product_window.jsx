@@ -39,7 +39,7 @@ export default function ProductWindow({
             
             
             <h2 className="text-3xl md:text-3xl  sm:text-1xl font-semibold text-[#0F2A44] leading-tight">
-              Premium UPVC Windows  <span></span>
+              Premium uPVC Windows  <span></span>
               
               <span className="text-slate-500">Crafted for Modern Living</span>
             </h2>
@@ -132,7 +132,7 @@ export default function ProductWindow({
               
               {/* Optional Badge */}
               <div className="absolute bottom-4 right-4 bg-sky-600 text-white px-4 py-1.5 rounded-lg shadow-lg text-xs font-bold uppercase tracking-wide">
-                 10-Year Warranty
+                 15-Year Warranty
               </div>
             </motion.div>
           </motion.div>

@@ -85,7 +85,7 @@ function WindowLamination() {
             <div className="space-y-5 text-slate-600 text-lg">
               <p>
                 Choose from a wide range of premium lamination finishes that
-                enhance the beauty and durability of your UPVC windows.
+                enhance the beauty and durability of your uPVC windows.
               </p>
 
               <p>

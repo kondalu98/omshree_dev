@@ -94,11 +94,11 @@ function Nav() {
                   }`}
                 >
                   <div className="bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden py-2">
-                    <a href="/products/upvc-windows" className={`block px-6 py-3 transition-colors ${currentPath === '/products/upvc-windows' ? 'text-sky-500 bg-slate-50' : 'hover:bg-slate-50 hover:text-sky-500 text-slate-600'}`}>
-                      UPVC Windows
+                    <a href="/products/uPVC-windows" className={`block px-6 py-3 transition-colors ${currentPath === '/products/uPVC-windows' ? 'text-sky-500 bg-slate-50' : 'hover:bg-slate-50 hover:text-sky-500 text-slate-600'}`}>
+                      uPVC Windows
                     </a>
-                    <a href="/products/upvc-doors" className={`block px-6 py-3 transition-colors ${currentPath === '/products/upvc-doors' ? 'text-sky-500 bg-slate-50' : 'hover:bg-slate-50 hover:text-sky-500 text-slate-600'}`}>
-                      UPVC Doors
+                    <a href="/products/uPVC-doors" className={`block px-6 py-3 transition-colors ${currentPath === '/products/uPVC-doors' ? 'text-sky-500 bg-slate-50' : 'hover:bg-slate-50 hover:text-sky-500 text-slate-600'}`}>
+                      uPVC Doors
                     </a>
                   </div>
                 </div>
@@ -217,8 +217,8 @@ function Nav() {
             </button>
             {productsOpen && (
               <div className="ml-2 pl-4 border-l-2 border-slate-100 space-y-1 mb-2">
-                <a href="/products/upvc-windows" className={`block py-2 ${currentPath === '/products/upvc-windows' ? 'text-sky-500 font-medium' : 'text-slate-600'}`}>UPVC Windows</a>
-                <a href="/products/upvc-doors" className={`block py-2 ${currentPath === '/products/upvc-doors' ? 'text-sky-500 font-medium' : 'text-slate-600'}`}>UPVC Doors</a>
+                <a href="/products/uPVC-windows" className={`block py-2 ${currentPath === '/products/uPVC-windows' ? 'text-sky-500 font-medium' : 'text-slate-600'}`}>uPVC Windows</a>
+                <a href="/products/uPVC-doors" className={`block py-2 ${currentPath === '/products/uPVC-doors' ? 'text-sky-500 font-medium' : 'text-slate-600'}`}>uPVC Doors</a>
               </div>
             )}
           </div>

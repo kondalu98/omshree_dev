@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
+
 import { MessageCircle } from "lucide-react";
-import { useState, useEffect } from "react";
 
 const WhatsAppButton = () => {
   const [isVisible, setIsVisible] = useState(false);

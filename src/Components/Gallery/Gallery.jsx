@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 import g1 from "../assets/Gallery/photo_1.webp";
 import g10 from "../assets/Gallery/photo_10.webp";
 import g2 from "../assets/Gallery/photo_2.webp";
-import g3 from "../assets/Gallery/omshree_frame.jpeg";
+import g3 from "../assets/Gallery/photo_12.webp";
 import g4 from "../assets/Gallery/photo_4.webp";
 import g5 from "../assets/Gallery/photo_5.webp";
 import g6 from "../assets/Gallery/photo_6.webp";
@@ -47,7 +47,7 @@ export default function Gallery() {
     <>
       {/* HERO */}
       <section className="relative h-[300px] md:h-[400px]">
-        <img src={hero} className="absolute inset-0 w-full h-full object-cover" />
+        <img src={hero} alt="Gallery slider" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/60" />
          <div className="relative z-10 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-6 w-full">

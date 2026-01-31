@@ -1,9 +1,37 @@
+import { Helmet } from "react-helmet-async";
 import ProductDoor from "../Home/Product_Door";
 import about from "../assets/windows/c-profile-pic.jpg";
-import upvc_door from "../assets/windows/upvc_door.png";
+import uPVC_door from "../assets/windows/upvc_door.png";
 
 function DoorProduct() {
   return (
+    <>
+    <Helmet>
+  <title>uPVC Doors in Vizag | Sliding & French Doors |omshreeenterprises | Vishakapatnam</title>
+
+  <meta
+    name="description"
+    content="Explore premium uPVC doors in Vizag including sliding, French, and balcony doors. Om Shree Enterprises offers secure, weatherproof, and stylish uPVC door solutions."
+  />
+
+  <meta
+    name="keywords"
+    content="
+    upvc doors,
+     best doors in vizag,
+     best doors in vishakapatnam,
+      uPVC doors Vizag,
+      sliding doors Vizag,
+      French doors Vizag,
+      balcony doors Vizag,
+      uPVC door fabrications Vizag,
+      weatherproof doors Vizag
+    "
+  />
+
+  <link rel="canonical" href="https://omshreeenterprises.in/products/uPVC-doors" />
+</Helmet>
+
     <>
       {/* 🔝 Top Hero Section */}
       <section className="relative w-full h-[300px] sm:h-[380px] md:h-[450px] overflow-hidden">
@@ -18,8 +46,11 @@ function DoorProduct() {
 
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-6 w-full">
-          <h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold drop-shadow-lg animate-fade-in-up">              UPVC Doors
+          <h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold drop-shadow-lg animate-fade-in-up">              uPVC Doors
             </h3>
+             <p className="text-slate-200 mt-4 text-base sm:text-lg md:text-xl max-w-xl font-medium drop-shadow-md">
+                Engineered for durability, designed for elegance. Experience the best in noise reduction and energy efficiency.
+              </p>
             <div className="h-1.5 w-24 bg-sky-500 mt-4 rounded-full shadow-lg"></div>
           </div>
         </div>
@@ -44,7 +75,7 @@ function DoorProduct() {
             {/* Image Container */}
             <div className="bg-white p-2 md:p-4 rounded-2xl shadow-lg border border-slate-100 overflow-hidden">
                 <img 
-                    src={upvc_door} 
+                    src={uPVC_door} 
                     alt="uPVC Door Designs and Types" 
                     // 'w-full' makes it responsive width
                     // 'h-auto' keeps the aspect ratio correct
@@ -54,6 +85,7 @@ function DoorProduct() {
             </div>
         </div>
       </section>
+    </>
     </>
   );
 }

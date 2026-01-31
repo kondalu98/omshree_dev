@@ -2,6 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
 import { useRef, useState } from "react";
 
+import { Helmet } from "react-helmet-async";
 import contact from "../assets/About_slider.png";
 
 function Contact() {
@@ -39,6 +40,32 @@ function Contact() {
   const inputClasses = "w-full rounded-xl border border-slate-300 px-5 py-4 text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all duration-200 bg-slate-50 focus:bg-white";
 
   return (
+
+    <>
+    <Helmet>
+  <title>Contact Om Shree Enterprises | uPVC Windows Vizag</title>
+
+  <meta
+    name="description"
+    content="Contact Om Shree Enterprises in Vizag for uPVC windows and doors. Call or WhatsApp us for free consultation, pricing, and site visit."
+  />
+
+  <meta
+    name="keywords"
+    content="
+      contact uPVC windows Vizag,
+      uPVC window dealers Vizag,
+      Om Shree Enterprises contact
+      Vishakapatnam uPVC windows,
+      vizag,
+      om shree enterprises number,
+      upvc windows contact
+    "
+  />
+
+  <link rel="canonical" href="https://omshreeenterprises.in/contact" />
+</Helmet>
+
     <div className="bg-white min-h-screen">
       <Toaster position="top-center" />
 
@@ -58,7 +85,7 @@ function Contact() {
             </h3>
             <div className="h-1.5 w-24 bg-sky-500 mt-4 rounded-full mx-auto md:mx-0"></div>
             <p className="text-slate-200 mt-4 text-lg max-w-lg mx-auto md:mx-0">
-              We are here to help with your UPVC needs. Reach out to us today!
+              We are here to help with your uPVC needs. Reach out to us today!
             </p>
           </div>
         </div>
@@ -141,7 +168,7 @@ function Contact() {
                 <div>
                   <h4 className="font-bold text-slate-800 text-lg">Visit Us</h4>
                   <p className="text-slate-600 mt-1 leading-relaxed">
-                    Kommadi Village Road, <br/>
+                    Kommadi Double Road, <br/>
                     Backside of HDFC Bank, <br/>
                     Visakhapatnam – 530048
                   </p>
@@ -178,7 +205,7 @@ function Contact() {
               <iframe
                 title="Omshree Enterprises Location"
                 // Using a query search to point to the location
-                src="https://maps.google.com/maps?q=Kommadi+Village+Road+Backside+of+HDFC+Bank+Visakhapatnam&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps?q=17.825132,83.352280&z=16&output=embed"
                 className="w-full h-full"
                 loading="lazy"
                 style={{ border: 0 }}
@@ -190,6 +217,7 @@ function Contact() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

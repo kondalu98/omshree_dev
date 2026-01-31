@@ -4,6 +4,8 @@ import {
   Phone,
 } from "lucide-react";
 
+import { FaWhatsapp } from "react-icons/fa";
+import { Instagram } from "lucide-react";
 import logo from "../assets/footer_logo.png";
 
 function Footer() {
@@ -27,7 +29,7 @@ function Footer() {
 />
 
             <p className="text-sm leading-relaxed text-slate-400">
-              Omshree Enterprises provide Premium UPVC windows and doors in Vizag, delivering durable,
+              Omshree Enterprises provide Premium uPVC windows and doors in Vizag, delivering durable,
               energy-efficient, and stylish solutions for homes and
               commercial spaces.
             </p>
@@ -43,8 +45,8 @@ function Footer() {
               {[
                 { name: "Home", link: "/" },
                 { name: "About Us", link: "/about" },
-                { name: "UPVC Windows", link: "/products/upvc-windows" },
-                { name: "UPVC Doors", link: "/products/upvc-doors" },
+                { name: "uPVC Windows", link: "/products/uPVC-windows" },
+                { name: "uPVC Doors", link: "/products/uPVC-doors" },
                 { name: "Gallery", link: "/gallery" },
                 { name: "Contact", link: "/contact" },
               ].map((item) => (
@@ -70,7 +72,7 @@ function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
-                  Kommadi Village Road, <br />
+                  Kommadi Double Road, <br />
                   HDFC Bank Backside, <br />
                   Visakhapatnam, <br />
                   Andhra Pradesh – 530048
@@ -101,27 +103,60 @@ function Footer() {
 
           {/* 4. Map */}
           <div className="w-full h-64 md:h-full min-h-[220px] rounded-xl overflow-hidden border border-slate-700 shadow-sm">
-            <iframe
-              title="Omshree Enterprises Location"
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3798.243548983416!2d83.35973787517618!3d17.827364883136866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ5JzM4LjUiTiA4M8KwMjEnNDQuMyJF!5e0!3m2!1sen!2sin!4v1716900000000!5m2!1sen!2sin"
-              className="w-full h-full"
-              loading="lazy"
-              style={{ border: 0 }}
-              allowFullScreen=""
-            />
+           <iframe
+  title="Omshree Enterprises Location"
+  src="https://www.google.com/maps?q=17.825132,83.352280&z=16&output=embed"
+  className="w-full h-full"
+  loading="lazy"
+  style={{ border: 0 }}
+  allowFullScreen
+/>
+
           </div>
 
         </div>
 
-        {/* Divider Line */}
-        <div className="border-t border-slate-800 my-8"></div>
+     {/* Divider Line */}
+<div className="border-t border-slate-800 my-8"></div>
 
-        {/* Copyright Section */}
-        <div className="text-center">
-          <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} Omshree Enterprises. All rights reserved.
-          </p>
-        </div>
+{/* Follow Us + Copyright */}
+<div className="flex flex-col items-center gap-4 text-center">
+
+  {/* Follow Us */}
+  <div className="flex items-center gap-4">
+    <span className="text-sm text-slate-400 font-medium">
+      Follow us
+    </span>
+
+    {/* WhatsApp */}
+    <a
+      href="https://wa.me/916303511130"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="WhatsApp"
+      className="text-slate-400 hover:text-green-500 transition"
+    >
+      <FaWhatsapp size={18} />
+    </a>
+
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/omshreeenterprises69"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+      className="text-slate-400 hover:text-pink-500 transition"
+    >
+      <Instagram size={18} />
+    </a>
+  </div>
+
+  {/* Copyright */}
+  <p className="text-sm text-slate-500">
+    © {new Date().getFullYear()} Omshree Enterprises. All rights reserved.
+  </p>
+</div>
+
 
       </div>
     </footer>

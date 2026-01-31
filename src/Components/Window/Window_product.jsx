@@ -1,5 +1,6 @@
 import GlassOptions from "../Home/Glass";
 import HardwareSection from "../Home/Hardware";
+import { Helmet } from "react-helmet-async";
 import ProductWindow from "../Home/Product_window";
 import SlidingProfiles from "../Home/Glazy";
 import WindowLamination from "../Home/Lamination";
@@ -8,6 +9,31 @@ import windowImg from "../assets/sample_window_slider.png";
 
 function WindowProduct() {
   return (
+<>
+<Helmet>
+  <title>uPVC Windows in Vizag | Sliding & Casement Windows</title>
+
+  <meta
+    name="description"
+    content="Buy high-quality uPVC windows in Vizag from Om Shree Enterprises. We provide sliding, casement, fixed, and custom uPVC windows with superior insulation and durability."
+  />
+
+  <meta
+    name="keywords"
+    content="
+      uPVC windows Vizag,
+      sliding windows Vizag,
+      casement windows Vizag,
+      best window fabrications Vizag,
+      uPVC window installation Vizag,
+      noise reduction windows Vizag
+    "
+  />
+
+  <link rel="canonical" href="https://omshreeenterprises.in/products/uPVC-windows" />
+</Helmet>
+
+    
     <div className="w-full overflow-x-hidden bg-white">
       
       {/* 🔝 Top Hero Section */}
@@ -67,6 +93,7 @@ function WindowProduct() {
       </div>
 
     </div>
+    </>
   );
 }
 

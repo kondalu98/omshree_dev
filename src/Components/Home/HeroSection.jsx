@@ -9,21 +9,21 @@ const slides = [
   {
     image: img_1,
     title: "Transform Your Space",
-    subtitle: "Premium UPVC Windows",
-    desc: "Our UPVC windows combine modern aesthetics with exceptional insulation and durability, improving energy efficiency, security, and comfort.",
-    buttons: [{ label: "View Windows", link: "/products/upvc-windows", type: "primary" }],
+    subtitle: "Premium uPVC Windows",
+    desc: "Our uPVC windows combine modern aesthetics with exceptional insulation and durability, improving energy efficiency, security, and comfort.",
+    buttons: [{ label: "View Windows", link: "/products/uPVC-windows", type: "primary" }],
   },
   {
     image: img_2,
     title: "Luxury Meets Durability",
-    subtitle: "Discover Our UPVC Doors",
-    desc: "Designed for strength and sophistication, our UPVC doors deliver unmatched security, excellent energy efficiency, and a refined modern look.",
-    buttons: [{ label: "View Doors", link: "/products/upvc-doors", type: "primary" }],
+    subtitle: "Discover Our uPVC Doors",
+    desc: "Designed for strength and sophistication, our uPVC doors deliver unmatched security, excellent energy efficiency, and a refined modern look.",
+    buttons: [{ label: "View Doors", link: "/products/uPVC-doors", type: "primary" }],
   },
   {
     image: img_3,
     title: "Modernize Your Space",
-    subtitle: "UPVC Facades & Panels",
+    subtitle: "uPVC Facades & Panels",
     desc: "Upgrade your interiors and exteriors with durable, stylish uPVC facades and panels built for long-lasting beauty and contemporary design.",
     buttons: [{ label: "Contact Us", link: "/contact", type: "primary" }],
   },
@@ -119,7 +119,7 @@ function HeroSection() {
               }`}
             >
               {/* Subtitle Badge */}
-              <span className="inline-block py-1 px-3 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs md:text-sm font-semibold tracking-wide uppercase backdrop-blur-sm mb-2">
+              <span className="inline-block py-1 px-3 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs md:text-sm font-semibold tracking-wide  backdrop-blur-sm mb-2">
                 {slide.subtitle}
               </span>
 

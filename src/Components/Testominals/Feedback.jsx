@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useEffect, useState } from "react";
+
 import client_1 from '../assets/Gallery/photo_1.webp';
 import client_2 from '../assets/Gallery/photo_6.webp';
 import client_3 from '../assets/Gallery/photo_8.webp';
@@ -9,7 +10,7 @@ import test from '../assets/About_slider.png'; // Your main section background
 const testimonials = [
   {
     id: 1,
-    name: "Ramesh Kumar",
+    name: "Raju Garu",
     role: "Resort Owner, Vizag",
     image: "https://i.pravatar.cc/150?img=12",
     postImg:client_1, // Person
@@ -18,7 +19,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Naveen Kumar",
+    name: "SSD Constructions",
     role: "Apartment Resident",
     image: "https://i.pravatar.cc/150?img=47",
     postImg:client_2,    review: "Excellent service. The doors are strong, stylish, and perfect for the weather.",
@@ -26,7 +27,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Imran Khan",
+    name: "Govindha Rao",
     role: "Commercial Client",
     image: "https://i.pravatar.cc/150?img=33",
     postImg:client_3,  

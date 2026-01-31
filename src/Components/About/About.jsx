@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react"; // Imported for the feature list
+import { Helmet } from "react-helmet-async";
 import TrustSection from "./TrustSection";
 import about from "../assets/About_slider.png";
 import aboutleft from "../assets/About_left.png";
@@ -8,7 +9,7 @@ function About() {
   // Key features regarding Om Shree / Baydee uPVC
   const features = [
     "Authorized Partner of Baydee Profiles",
-    "German-Engineered UPVC Technology",
+    "German-Engineered uPVC Technology",
     "Soundproof & Thermal Insulation",
     "100% Termite & Corrosion Resistant",
     "Customizable Designs (Sliding, Casement, Villa)",
@@ -17,6 +18,33 @@ function About() {
 
   return (
     <>
+<Helmet>
+  <title>About Om Shree Enterprises | uPVC Experts in Vizag</title>
+
+  <meta
+    name="description"
+    content="Om Shree Enterprises is a leading uPVC windows and doors company in Vizag with years of experience delivering quality, reliability, and customer satisfaction."
+  />
+
+  <meta
+    name="keywords"
+    content="
+      Om Shree Enterprises,
+      uPVC company Vizag,
+      window suppliers Vizag,
+      door fabrications Vizag,
+      Best upvc doors
+      Best upvc windows,
+      uPVC experts Vizag,
+      Baydee Profiles partner,
+      Baydee uPVC Vizag,
+    "
+  />
+
+  <link rel="canonical" href="https://omshreeenterprises.in/about" />
+</Helmet>
+
+    
       {/* 🔝 Top Hero Section */}
       <section className="relative w-full h-[350px] sm:h-[380px] md:h-[450px] overflow-hidden">
         <img
@@ -34,7 +62,7 @@ function About() {
             </h3>
             <div className="h-1.5 w-24 bg-sky-500 mt-4 rounded-full"></div>
             <p className="text-slate-200 mt-4 text-lg md:text-xl font-medium max-w-2xl">
-              Transforming Vizag's Skyline with Premium UPVC Solutions.
+              Transforming Vizag's Skyline with Premium uPVC Solutions.
             </p>
           </div>
         </div>
